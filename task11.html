@@ -42,6 +42,15 @@
         
 
             window.addEventListener('DOMContentLoaded', (event) => {
+                axios.get("https://crudcrud.com/api/89178382b46a493381e9d58f1914eb69/appointmentdata")
+                .then((response)=>{
+                    console.log(response);
+                    for(var i=0;i<response.data[i])
+                })
+
+                .catch((err)=>{
+                    console.log(err);
+                })
                 Object.keys(localStorage).forEach(key => {
                     const user = JSON.parse(localStorage.getItem(key))
                     showListofRegisteredUser(user)
